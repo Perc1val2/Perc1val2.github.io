@@ -1831,7 +1831,7 @@ a{color:inherit;text-decoration:none}
     var videoPh  = modalOverlay.querySelector('#panelVideo .modal__video-placeholder');
     var biliEl   = modalOverlay.querySelector('#panelVideo .modal__bilibili');
     if (bvid) {
-      if (biliEl) { biliEl.src = '//player.bilibili.com/player.html?bvid=' + bvid; biliEl.style.display = ''; }
+      if (biliEl) { biliEl.src = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&page=1&as_wide=1'; biliEl.style.display = ''; }
       if (videoEl) videoEl.style.display = 'none';
       if (videoPh) videoPh.style.display = 'none';
     } else if (video) {
