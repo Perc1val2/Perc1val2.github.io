@@ -1,0 +1,1947 @@
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║              👋 欢迎！这份文件就是你的个人网页                     ║
+║                                                                  ║
+║  📌 使用方法：找到所有 【★】 标记，替换成你自己的内容             ║
+║  📌 快捷操作：按 Ctrl+H 搜索 【★ 逐个替换                        ║
+║  📌 改完按 Ctrl+S 保存，双击 .html 文件在浏览器看效果             ║
+║  📌 <!-- 灰色文字 --> 是注释，不会显示在网页上                    ║
+║  📌 <style> 和 <script> 里的代码不要动                           ║
+║                                                                  ║
+║  🗺️ 全部可编辑位置速查表（搜索对应编号即可跳转）：               ║
+║    [A01] 浏览器标签页标题    → 搜索 "A01"                        ║
+║    [A02] 背景图片路径        → 搜索 "A02"                        ║
+║    [A03] 导航栏名字          → 搜索 "A03"                        ║
+║    [A04] 导航栏页面标签      → 搜索 "A04"                        ║
+║    [A05] 手机版导航标签      → 搜索 "A05"                        ║
+║    [B01] 左侧邮箱标签        → 搜索 "B01"                        ║
+║    [B02] 联系我邮箱          → 搜索 "B02"                        ║
+║    [B03] 小字标识            → 搜索 "B03"                        ║
+║    [B04] 主标题名字          → 搜索 "B04"                        ║
+║    [B05] 标签行              → 搜索 "B05"                        ║
+║    [B06] 描述第一行          → 搜索 "B06"                        ║
+║    [B07] 描述第二行          → 搜索 "B07"                        ║
+║    [B08] 底部状态文字        → 搜索 "B08"                        ║
+║    [C01] 分类标题-关卡白盒   → 搜索 "C01"                        ║
+║    [C02] 分类标题-关卡拆解   → 搜索 "C02"                        ║
+║    [C03] 分类标题-地图设计   → 搜索 "C03"                        ║
+║    [D01] 卡片图片1           → 搜索 "D01"                        ║
+║    关卡白盒卡片1-视频/DOC    → 搜索 "卡片1-video"/"卡片1-doc"    ║
+║    每张卡片含：图片路径、项目名称、技术标签、项目描述             ║
+║    [E01] PDF简历路径         → 搜索 "E01"                        ║
+║    [E02] 个人简介文字        → 搜索 "E02"                        ║
+║    [E03] 专长领域标签        → 搜索 "E03"                        ║
+║    [E04] 引擎和平台标签      → 搜索 "E04"                        ║
+║    [E05] 工具和软件标签      → 搜索 "E05"                        ║
+║    [E06] 代码与脚本标签      → 搜索 "E06"                        ║
+║    [F01] 实习经历简介        → 搜索 "F01"                        ║
+║    [G01] 页脚版权年份/名字   → 搜索 "G01"                        ║
+║    [G02] GitHub链接          → 搜索 "G02"                        ║
+║    [G03] LinkedIn链接        → 搜索 "G03"                        ║
+║    [G04] 页脚邮箱            → 搜索 "G04"                        ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【★A01 浏览器标签页标题，如：林治 - 关卡策划作品集】</title>
+
+<!-- 系统无衬线字体 -->
+
+<!-- Font Awesome 6 (图标库，不用改) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ================================================================
+   以下是全部CSS样式 —— 你不需要动这里面的任何东西
+   如果想改颜色，搜索 #222222（深色）或 #555555（灰色）替换即可
+   ================================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #111111;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+/* [A02] 全屏背景图 — 替换 url() 里的路径 */
+.hero-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: #e8e8e8 url('【★A02 背景图片路径，如 images/hero-bg.jpg】') center/cover no-repeat;
+}
+
+nav, section, footer, .modal-overlay { position: relative; z-index: 1; }
+
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container--narrow {
+  max-width: 720px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  z-index: 1000;
+  transition: box-shadow 0.3s;
+}
+
+.nav--scrolled {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.nav__inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+  user-select: none;
+  z-index: 1;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav__links a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #555555;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #222222;
+  transition: width 0.25s ease;
+}
+
+.nav__links a:hover,
+.nav__links a.nav--active { color: #111111; }
+
+.nav__links a.nav--active::after,
+.nav__links a:hover::after { width: 100%; }
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #111827;
+  border-radius: 1px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav__toggle--open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__toggle--open span:nth-child(2) { opacity: 0; }
+.nav__toggle--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav__mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+
+.nav__mobile--open { opacity: 1; pointer-events: auto; }
+
+.nav__mobile a {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #111111;
+  letter-spacing: -0.02em;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav__mobile a:hover { color: #222222; }
+
+.page {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  padding-top: 56px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.page--active { display: block; opacity: 1; }
+
+.helmet-logo {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  animation: helmetFloat 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes helmetFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.helmet-dome {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 72px; height: 80px;
+  border: 1.5px solid #1e40af;
+  border-radius: 50% 50% 40% 40%;
+  background: transparent;
+}
+
+.helmet-visor {
+  position: absolute;
+  top: 18px; left: 50%;
+  transform: translateX(-50%);
+  width: 48px; height: 52px;
+  border: 1.5px solid #1e40af;
+  border-radius: 55% 55% 45% 45%;
+  background: rgba(30,64,175,0.06);
+  overflow: hidden;
+}
+
+.helmet-visor::after {
+  content: '';
+  position: absolute;
+  top: 8px; left: 8px;
+  width: 14px; height: 20px;
+  background: rgba(212,175,55,0.25);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.helmet-ring {
+  position: absolute;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  width: 56px; height: 10px;
+  border: 1.5px solid #1e40af;
+  border-top: none;
+  border-radius: 0 0 28px 28px;
+}
+
+.helmet-antenna {
+  position: absolute;
+  top: -6px; left: 50%;
+  transform: translateX(-50%);
+  width: 1.5px; height: 16px;
+  background: #d4af37;
+  border-radius: 1px;
+}
+
+.helmet-antenna::after {
+  content: '';
+  position: absolute;
+  top: -5px; left: -4px;
+  width: 10px; height: 10px;
+  border: 1.5px solid #d4af37;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.helmet-shoulders {
+  position: absolute;
+  bottom: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 82px; height: 20px;
+  border: 1.5px solid #1e40af;
+  border-top: none;
+  border-radius: 0 0 42px 42px;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 56px);
+  /* 左侧40%宽，固定左内边距，右侧大面积无文字 */
+  padding: 0 0 0 4rem;
+  width: 40%;
+  max-width: 560px;
+  min-width: 360px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 统一纵向间距 */
+.identity > * {
+  margin-bottom: 0.9rem;
+}
+.identity > *:last-child { margin-bottom: 0; }
+
+/* 小字标识 */
+.identity__top-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #888888;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* 超大主标题 */
+.identity__name {
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #111111;
+  text-align: left;
+}
+
+/* 标签行 */
+.identity__tags {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #666666;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.identity__tags span { display: inline; }
+
+.identity__tags .sep {
+  color: #cccccc;
+  margin: 0 0.5rem;
+}
+
+/* 两段描述 */
+.identity__desc {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #777777;
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* 左侧邮箱小标签 */
+.identity__email-tag {
+  position: fixed;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  color: #999999;
+  letter-spacing: 0.04em;
+  writing-mode: vertical-rl;
+}
+
+.identity__email-tag i {
+  font-size: 1rem;
+  color: #aaaaaa;
+}
+
+/* 右侧浮动：头盔Logo + 联系我按钮，距右边缘约10% */
+.identity__right-float {
+  position: fixed;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* 按钮 */
+.identity__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  padding: 0.4rem 0.2rem;
+  transition: all 0.25s;
+  text-decoration: none;
+  background: transparent;
+  color: #111111;
+  border: none;
+  white-space: nowrap;
+}
+
+.identity__btn:hover { color: #555555; }
+
+.identity__btn i { font-size: 1rem; }
+
+.identity__btn--outline:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* 底部状态小字 — 紧贴可视区底边，左对齐 */
+.identity__status {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.8rem 4rem;
+  font-size: 0.75rem;
+  color: #999999;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.category {
+  padding: 2rem 0 2rem;
+}
+
+.category__title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 2.25rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.category__title::before,
+.category__title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(30,64,175,0.35), transparent);
+}
+
+.category__title-inner {
+  position: relative;
+  padding: 0 0.15em;
+}
+
+.category__title-inner::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #555555;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  background: #ffffff;
+  box-shadow:
+    0 1px 2px rgba(15,23,42,0.04),
+    0 12px 24px -16px rgba(15,23,42,0.08),
+    inset 0 0 0 1px rgba(15,23,42,0.04);
+  transition:
+    transform 0.45s cubic-bezier(0.22,0.61,0.36,1),
+    box-shadow 0.45s cubic-bezier(0.22,0.61,0.36,1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 2px 4px rgba(15,23,42,0.04),
+    0 32px 56px -20px rgba(30,64,175,0.18),
+    inset 0 0 0 1px rgba(30,64,175,0.12);
+}
+
+.project-card__img {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.project-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__img img:not([src]),
+.project-card__img img[src=""] {
+  display: none;
+}
+
+.project-card__img-placeholder {
+  position: absolute;
+  inset: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  border: 2px dashed #d0d0d0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.project-card:hover .project-card__img-placeholder {
+  border-color: #aaaaaa;
+}
+
+.project-card__img-placeholder svg {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  z-index: 1;
+  color: #cccccc;
+  transition: transform 0.5s cubic-bezier(0.22,0.61,0.36,1), color 0.3s;
+}
+
+.project-card:hover .project-card__img-placeholder svg {
+  transform: translateY(-3px);
+  color: #999999;
+}
+
+.project-card__img-placeholder-label {
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #aaaaaa;
+}
+
+.project-card__img-placeholder-label::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #cccccc;
+  margin: 8px auto 0;
+}
+
+.project-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem 1.75rem 2rem;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid #e0e0e0;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.project-card:hover .project-card__overlay {
+  transform: translateY(0);
+}
+
+.project-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.project-card__title::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #222222;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+.project-card__desc {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.65;
+  margin-top: 0.5rem;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.project-card__tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #555555;
+  background: rgba(0,0,0,0.06);
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+}
+
+.resume-page {
+  padding: 3rem 0 6rem;
+}
+
+.resume__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.resume__title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 200;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+.resume__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: #333333;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.resume__download:hover { background: #cccccc; color: #111111; }
+
+.resume__section { margin-bottom: 2.75rem; }
+
+.resume__section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.resume__bio {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.resume__specialties {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume__specialties-inner {
+  text-align: right;
+}
+
+.resume__specialties-inner .resume__section-title {
+  text-align: right;
+}
+
+.resume__work-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume__work-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #333333;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.resume__work-list li:last-child { border-bottom: none; }
+
+.resume__work-name { font-weight: 600; color: #111111; }
+.resume__work-platform { color: #555555; }
+
+.resume__work-date {
+  color: #888888;
+  margin-left: auto;
+  font-size: 0.85rem;
+}
+
+.resume__honor {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222222;
+  letter-spacing: -0.01em;
+  padding: 0.5rem 0;
+  margin-bottom: 0.3rem;
+}
+
+.resume__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resume__tags--right { justify-content: flex-end; }
+
+.resume__tags--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.resume__tags--vertical .resume__tag {
+  display: block;
+  width: auto;
+  text-align: left;
+}
+
+.resume__tags--vertical.resume__tags--right {
+  align-items: flex-end;
+}
+
+.resume__tags--vertical.resume__tags--right .resume__tag {
+  text-align: right;
+}
+
+.resume__tag {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #333333;
+  background: #f0f0f0;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.resume__tag:hover { background: #e0e0e0; color: #111111; }
+
+.resume__divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2.5rem 0;
+}
+
+.experience-page { padding: 3rem 0 6rem; }
+
+.experience__title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 200;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+
+.experience-placeholder {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #888888;
+  font-size: 0.95rem;
+}
+
+.experience-placeholder i {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #aaaaaa;
+}
+
+/* ═══════════════════════════════════════════════════════ */
+/*  弹窗系统                                               */
+/* ═══════════════════════════════════════════════════════ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal-overlay--open { opacity: 1; pointer-events: auto; }
+
+/* ── 视频模式弹窗（关卡白盒）：纯黑播放器，直角，无边框 ── */
+.modal {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  transform: scale(0.94);
+  transition: transform 0.3s cubic-bezier(0.22,0.61,0.36,1);
+  box-shadow: none;
+}
+
+.modal-overlay--open .modal { transform: scale(1); }
+
+/* ── 文档模式弹窗（关卡拆解/地图设计）：顶天立地100vh，直角 ── */
+.modal-overlay--doc-only {
+  padding: 0 2rem;
+  align-items: stretch;
+  background: rgba(0,0,0,0.45);
+}
+
+.modal-overlay--doc-only .modal {
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  max-width: 1100px;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 0 60px rgba(0,0,0,0.2);
+}
+
+/* ── 标签按钮（玻璃质感，默认深色，doc-only为浅色）── */
+.modal__tabs {
+  position: absolute;
+  left: -110px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.modal__tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  letter-spacing: 0.03em;
+  transition: all 0.25s;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.modal__tab:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+.modal__tab--active {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateX(6px);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* doc-only标签适配白底 */
+.modal-overlay--doc-only .modal__tab {
+  color: #444;
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.modal-overlay--doc-only .modal__tab:hover {
+  color: #111;
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.18);
+}
+
+.modal-overlay--doc-only .modal__tab--active {
+  color: #111;
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.22);
+  font-weight: 600;
+}
+
+/* ── 内容区 ── */
+.modal__content {
+  flex: 1;
+  overflow-y: auto;
+  margin-left: 0;
+  padding: 0;
+}
+
+.modal__panel { display: none; }
+.modal__panel--active { display: block; height: 100%; }
+
+/* ── 关闭按钮（白色，直角）── */
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: -44px;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #ffffff;
+  z-index: 100;
+  transition: background 0.2s;
+}
+
+.modal__close:hover { background: rgba(255,255,255,0.3); }
+
+.modal-overlay--doc-only .modal__close {
+  top: 12px;
+  right: 12px;
+  color: #555;
+  background: rgba(0,0,0,0.05);
+}
+
+.modal-overlay--doc-only .modal__close:hover {
+  color: #111;
+  background: rgba(0,0,0,0.1);
+}
+
+/* ── 视频面板：纯黑播放器，无边框无圆角 ── */
+.modal__video-wrap {
+  width: 100%;
+  background: #000000;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.modal__video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  background: #000000;
+}
+
+/* 加载转圈 */
+.modal__video-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.modal__video-loader::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.modal__video-placeholder {
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  padding: 2rem;
+  background: #000000;
+}
+
+.modal__video-placeholder i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.5;
+}
+
+.modal__video-placeholder p { font-size: 0.9rem; }
+
+/* ── 文档面板：全高度PDF iframe，直角，无边框 ── */
+.modal__doc-iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 0;
+  display: none;
+  background: #ffffff;
+}
+
+/* doc-only 撑满全高 */
+.modal-overlay--doc-only .modal__doc-iframe {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.modal__doc-iframe--visible { display: block; }
+
+.modal__doc-text {
+  font-size: 0.95rem;
+  color: #333333;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  display: none;
+  padding: 2rem;
+  background: #ffffff;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal__doc-text--visible { display: block; }
+
+.modal__doc-placeholder {
+  text-align: center;
+  color: #999999;
+  padding: 4rem 2rem;
+  background: #fafafa;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__doc-placeholder i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.4;
+  color: #cccccc;
+}
+
+.modal__doc-placeholder p { font-size: 0.9rem; }
+
+.modal__doc-placeholder--hidden { display: none; }
+
+.footer {
+  background: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+  color: #888888;
+  margin-bottom: 0.75rem;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer__social a {
+  font-size: 1.1rem;
+  color: #888888;
+  transition: color 0.2s;
+}
+
+.footer__social a:hover { color: #222222; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 1024px) {
+  .identity { width: 50%; max-width: 480px; min-width: 280px; padding-left: 2rem; }
+  .identity__email-tag { left: 0.5rem; font-size: 0.6rem; }
+  .identity__right-float { right: 4%; }
+  .identity__status { padding: 0.6rem 2rem; }
+
+  .projects__grid { gap: 1.5rem; }
+
+  .modal__tabs {
+    position: static;
+    flex-direction: row;
+    transform: none;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .modal__tab {
+    font-size: 0.78rem;
+    padding: 0.5rem 0.9rem;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .modal__tab:hover { transform: none; background: rgba(255,255,255,0.16); }
+  .modal__tab--active { background: rgba(255,255,255,0.22); color: #ffffff; transform: none; box-shadow: 0 4px 14px rgba(0,0,0,0.18); font-weight: 600; }
+
+  .modal__content { margin-left: 0; padding: 1.5rem; }
+
+  .modal {
+    flex-direction: column;
+    background: rgba(30,30,50,0.6);
+  }
+
+  .helmet-logo { width: 80px; height: 90px; }
+  .helmet-dome { width: 58px; height: 64px; }
+  .helmet-visor { width: 38px; height: 42px; top: 14px; }
+  .helmet-ring { width: 44px; bottom: 22px; }
+  .helmet-shoulders { width: 66px; bottom: 8px; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 1.25rem; }
+  .nav__inner { padding: 0 1.25rem; }
+  .nav__links { display: none; }
+  .nav__toggle { display: flex; }
+  .nav__mobile { display: flex; }
+
+  .identity { min-height: auto; padding: 6rem 1.5rem 3rem; width: 100%; max-width: 100%; min-width: 0; }
+
+  .identity__email-tag { display: none; }
+
+  .identity__right-float { position: relative; right: auto; top: auto; transform: none; flex-direction: row; gap: 1rem; margin-top: 1.5rem; }
+
+  .identity__name { font-size: clamp(2.5rem, 10vw, 4rem); }
+
+  .helmet-logo { width: 60px; height: 66px; }
+
+  .identity__status { padding: 0.5rem 1.5rem; font-size: 0.7rem; }
+
+  .helmet-logo { width: 80px; height: 90px; }
+  .helmet-dome { width: 58px; height: 64px; }
+  .helmet-visor { width: 38px; height: 42px; top: 14px; }
+  .helmet-ring { width: 44px; bottom: 22px; }
+  .helmet-shoulders { width: 66px; bottom: 8px; }
+
+  .projects__grid { grid-template-columns: 1fr; }
+
+  .modal-overlay { padding: 1rem; }
+  .modal { border-radius: 0; }
+  .modal__close { top: 0; right: -36px; }
+
+  .modal__tabs {
+    position: static;
+    flex-direction: row;
+    transform: none;
+    padding: 0.5rem;
+    gap: 0.4rem;
+    overflow-x: auto;
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+  }
+
+  .modal__tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    padding: 0.4rem 0.7rem;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0;
+  }
+
+  .modal__tab:hover { transform: none; background: rgba(255,255,255,0.14); }
+  .modal__tab--active { background: rgba(255,255,255,0.2); color: #fff; transform: none; font-weight: 600; }
+
+  .modal__content { margin-left: 0; padding: 0; min-height: 250px; }
+  .modal { flex-direction: column; background: transparent; }
+
+  .modal__doc-iframe { height: 100%; }
+
+  .modal-overlay--doc-only { padding: 0 0.25rem; }
+  .modal-overlay--doc-only .modal { border-radius: 0; }
+  .modal-overlay--doc-only .modal__close { top: 6px; right: 6px; }
+  .modal-overlay--doc-only .modal__tab {
+    color: #555;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .resume__header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+  .resume__specialties { justify-content: flex-start; }
+  .resume__specialties-inner { text-align: left; }
+  .resume__specialties-inner .resume__section-title { text-align: left; }
+  .resume__tags--right { justify-content: flex-start; }
+
+  .modal-overlay--doc-only { padding: 0 0.25rem; }
+  .modal-overlay--doc-only .modal { border-radius: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== [A03] 导航栏名字 / [A04][A05] 页面标签 ========== -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#" data-nav="home">Perc1val</a>
+    <ul class="nav__links">
+      <li><a href="#" data-nav="home" class="nav--active">首页</a></li>
+      <li><a href="#" data-nav="resume">个人简介</a></li>
+      <li><a href="#" data-nav="experience">实习经历</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="#" data-nav="home">首页</a>
+    <a href="#" data-nav="resume">个人简介</a>
+    <a href="#" data-nav="experience">实习经历</a>
+  </div>
+</nav>
+
+<!-- ========== 【首页】— 身份区：姓名、职位、邮箱 ========== -->
+<section class="page page--active" id="page-home" data-page="home">
+
+  <!-- ═══════════ 首页身份区 [B01]-[B08] ═══════════ -->
+
+  <!-- [A02] 全屏背景图 -->
+  <div class="hero-bg"></div>
+
+  <!-- [B01] 左侧邮箱小标签 -->
+  <div class="identity__email-tag">
+    <i class="fa-regular fa-envelope"></i>
+    <span>3462286370@qq.com</span>
+  </div>
+
+  <!-- 右侧浮动：头盔Logo + [B02] 联系我 -->
+  <div class="identity__right-float">
+    <div class="helmet-logo">
+      <div class="helmet-antenna"></div>
+      <div class="helmet-dome"></div>
+      <div class="helmet-visor"></div>
+      <div class="helmet-ring"></div>
+      <div class="helmet-shoulders"></div>
+    </div>
+    <a href="mailto:【★B02 你的邮箱】" class="identity__btn">
+      <i class="fa-regular fa-envelope"></i> 联系我
+    </a>
+  </div>
+
+  <!-- 核心文字组 [B03]-[B07] -->
+  <div class="identity">
+    <p class="identity__top-label">个人作品集</p>
+    <h1 class="identity__name">田沁松</h1>
+    <p class="identity__tags">
+      <span>关卡策划</span><span class="sep">|</span>
+      <span>场景设计</span><span class="sep">|</span>
+      <span>内容构建</span>
+    </p>
+    <p class="identity__desc">打造令人难忘的游戏空间、3D关卡和玩家驱动体验</p>
+    <p class="identity__desc"></p>
+  </div>
+
+  <!-- [B08] 底部状态小字 -->
+  <p class="identity__status">Available for work · 关卡策划 · 2026</p>
+
+  <!-- ═══════════ [C01] 关卡白盒 / [D01] 卡片 ═══════════ -->
+  <div class="category" id="cat-whitebox">
+    <div class="container">
+      <h2 class="category__title"><span class="category__title-inner">关卡白盒</span></h2>
+      <div class="projects__grid">
+
+        <!-- ── 关卡白盒 卡片1：第一人称时空变换白盒 ── -->
+        <div class="project-card reveal" data-project="whitebox-1"
+             data-video="Time.mp4"
+             data-video-poster="Time.png"
+             data-doc-iframe="Time.pdf"
+             data-doc-text="">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder">
+              <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
+              <span class="project-card__img-placeholder-label"></span>
+            </div>
+            <img alt="项目截图" loading="lazy" decoding="async" src="Time.png"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card__overlay">
+            <h3 class="project-card__title">第一人称时空变换白盒</h3>
+            <div class="project-card__tags">
+              <span class="project-card__tag">UE5</span>
+              <span class="project-card__tag">蓝图</span>
+              <span class="project-card__tag">第一人称</span>
+            </div>
+            <p class="project-card__desc">第一人称时空变换机制白盒Demo，通过时间回溯与空间折叠核心玩法，构建非线性解密关卡流程。</p>
+          </div>
+        </div>
+
+        <!-- ── 关卡白盒 卡片2：山谷关卡白盒 ── -->
+        <div class="project-card reveal" data-project="whitebox-2"
+             data-video="valley.mp4"
+             data-video-poster="Valley.png"
+             data-doc-iframe="Valley.pdf"
+             data-doc-text="">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder">
+              <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
+              <span class="project-card__img-placeholder-label"></span>
+            </div>
+            <img alt="项目截图" loading="lazy" decoding="async" src="Valley.png"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card__overlay">
+            <h3 class="project-card__title">山谷线性关卡白盒</h3>
+            <div class="project-card__tags">
+              <span class="project-card__tag">UE5</span>
+              <span class="project-card__tag">蓝图</span>
+              <span class="project-card__tag">Level Sequence</span>
+            </div>
+            <p class="project-card__desc">初始引导关卡，让玩家在山谷的探索中了解游戏的基础操作与战斗节奏。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ [C02] 关卡拆解 ═══════════ -->
+  <div class="category" id="cat-deconstruct">
+    <div class="container">
+      <h2 class="category__title"><span class="category__title-inner">关卡拆解案</span></h2>
+      <div class="projects__grid">
+
+        <!-- ── 关卡拆解 卡片1（纯文档模式）── -->
+        <div class="project-card reveal" data-project="deconstruct-1" data-modal-mode="doc-only"
+             data-video="" data-video-poster=""
+             data-doc-iframe="sekiro.pdf"
+             data-doc-text="">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder">
+              <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
+              <span class="project-card__img-placeholder-label"></span>
+            </div>
+            <img alt="项目截图" loading="lazy" decoding="async" src="sekiro.jpg"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card__overlay">
+            <h3 class="project-card__title">只狼：平田宅邸关卡拆解案</h3>
+            <div class="project-card__tags">
+              <span class="project-card__tag">箱庭探索</span>
+              <span class="project-card__tag">场景叙事</span>
+            </div>
+            <p class="project-card__desc">分析了火焰吞噬的日式庄园箱庭地图，将场景叙事与战斗教学深度融合，引导玩家在“紧张-放松”的节奏中体验平田宅邸的背叛往事。</p>
+          </div>
+        </div>
+
+        <!-- ── 关卡拆解 卡片2（纯文档模式）── -->
+        <div class="project-card reveal" data-project="deconstruct-2" data-modal-mode="doc-only"
+             data-video="" data-video-poster=""
+             data-doc-iframe="MingChao.pdf"
+             data-doc-text="">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder">
+              <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
+              <span class="project-card__img-placeholder-label"></span>
+            </div>
+            <img alt="项目截图" loading="lazy" decoding="async" src="mingchao.jpg"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card__overlay">
+            <h3 class="project-card__title">鸣潮地图关卡设计迭代拆解</h3>
+            <div class="project-card__tags">
+              <span class="project-card__tag">据点式设计</span>
+              <span class="project-card__tag">抽卡驱动力平衡</span>
+            </div>
+            <p class="project-card__desc">分析了鸣潮从散点式清单探索转向据点式目标地图，配合飞行系统与视觉奇观引导，在长线服务型游戏中平衡玩法乐趣与抽卡资源焦虑。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ [C03] 地图设计 ═══════════ -->
+  <div class="category" id="cat-mapdesign">
+    <div class="container">
+      <h2 class="category__title"><span class="category__title-inner">地图设计</span></h2>
+      <div class="projects__grid">
+
+        <!-- ── 地图设计 卡片1（纯文档模式）── -->
+        <div class="project-card reveal" data-project="mapdesign-1" data-modal-mode="doc-only"
+             data-video="" data-video-poster=""
+             data-doc-iframe="Doc1.pdf"
+             data-doc-text="">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder">
+              <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
+              <span class="project-card__img-placeholder-label"></span>
+            </div>
+            <img alt="项目截图" loading="lazy" decoding="async" src="doc1.png"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card__overlay">
+            <h3 class="project-card__title">山谷探险设计原稿</h3>
+            <div class="project-card__tags">
+              <span class="project-card__tag">线性流程</span>
+              <span class="project-card__tag">视觉引导</span>
+            </div>
+            <p class="project-card__desc"></p>
+          </div>
+        </div>
+
+        <!-- ── 地图设计 卡片2：实验室潜入 ── -->
+        <div class="project-card reveal" data-project="mapdesign-2" data-modal-mode="doc-only"
+             data-video="" data-video-poster=""
+             data-doc-iframe="Time design.pdf"
+             data-doc-text="">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder">
+              <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
+              <span class="project-card__img-placeholder-label"></span>
+            </div>
+            <img alt="项目截图" loading="lazy" decoding="async" src="Time Desgin.png"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card__overlay">
+            <h3 class="project-card__title">实验室潜入设计原稿</h3>
+            <div class="project-card__tags">
+              <span class="project-card__tag">机制教学</span>
+              <span class="project-card__tag">非线性地图编排</span>
+            </div>
+            <p class="project-card__desc"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  【简历页】— 填写你的各项信息                                 -->
+<!--  修改方式：逐个替换【★...】中的内容                          -->
+<!--  不需要的奖项/作品：直接删掉对应行                            -->
+<!--  需要更多位置：复制一行再改文字                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="page" id="page-resume" data-page="resume">
+  <div class="resume-page">
+    <div class="container container--narrow">
+
+      <div class="resume__header">
+        <h2 class="resume__title">个人简介</h2>
+        <a href="【★E01 PDF简历路径，如 resume.pdf】" class="resume__download" target="_blank">
+          <i class="fa-regular fa-file-pdf"></i> 下载 PDF
+        </a>
+      </div>
+
+      <div class="resume__section">
+        <p class="resume__bio">一名正在求职关卡策划岗位的游戏设计爱好者。目前就读于南京理工大学紫金学院自动化专业（2027届），现居广东广州。对游戏设计不仅有着深入的理解，更保持着浓厚的学习热情。</p>
+        <p class="resume__bio">在实操层面，精通UE引擎，能够快速完成关卡白盒搭建、蓝图编辑、Level Sequence编排及场景地编设计；同时掌握工程制图CAD与3DS Max，可独立完成从设计俯视图到3D落地的全流程落地。熟练运用VScode、Cursor、Claude Code等AI工具辅助开发，显著提升代码编写效率与问题排查能力。</p>
+        <p class="resume__bio">在校期间，曾担任大学生文化艺术中心技术部音响部部长。任职期间，沟通表达能力出色，逻辑思维清晰，擅长协同推进工作并高效解决问题，具备优秀的团队协作能力。</p>
+        <p class="resume__bio">游戏经历方面，横跨主机、手机与PC三大平台，对动作、策略、休闲等各类游戏均有深度体验，能够敏锐洞察不同平台玩家的需求差异。</p>
+        <p class="resume__bio">我相信，扎实的游戏分析能力、落地的开发实操经验，以及对玩家体验的持续敏感，能够让我在关卡策划的岗位上创造价值。期待有机会加入团队，共同打磨出让人沉浸、心动的游戏世界。</p>
+      </div>
+
+      <hr class="resume__divider">
+
+      <div class="resume__section">
+        <div class="resume__specialties">
+          <div class="resume__specialties-inner">
+
+            <h3 class="resume__section-title">专长领域</h3>
+            <div class="resume__tags resume__tags--right">
+              <span class="resume__tag">白盒搭建</span>
+              <span class="resume__tag">动线编排</span>
+              <span class="resume__tag">场景叙事</span>
+              <span class="resume__tag">机制引导</span>
+            </div>
+
+            <h3 class="resume__section-title" style="margin-top:1.8rem;">引擎和平台</h3>
+            <div class="resume__tags resume__tags--right">
+              <span class="resume__tag">Unreal Engine 5</span>
+              
+            </div>
+
+            <h3 class="resume__section-title" style="margin-top:1.8rem;">工具和软件</h3>
+            <div class="resume__tags resume__tags--right">
+              <span class="resume__tag">3DSMAX 2022</span>
+              <span class="resume__tag">Adobe Audition 2025</span>
+              <span class="resume__tag">VScode</span>
+              <span class="resume__tag">Claude code</span>
+            </div>
+
+            <h3 class="resume__section-title" style="margin-top:1.8rem;">代码与脚本</h3>
+            <div class="resume__tags resume__tags--right">
+              <span class="resume__tag">Python</span>
+              <span class="resume__tag">蓝图</span>
+             
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  【实习经历页】                                               -->
+<!--  下方有注释掉的模板，把 <!-- 和 --> 删掉就能启用               -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="page" id="page-experience" data-page="experience">
+  <div class="experience-page">
+    <div class="container container--narrow">
+
+      <h2 class="experience__title">实习经历</h2>
+
+      <div class="experience-placeholder">
+        <i class="fa-regular fa-clock"></i>
+        <p>期待与你合作</p>
+        <!--
+        
+        -->
+        <!--
+        <div style="text-align:left;margin-top:1.5rem;">
+          <div style="margin-bottom:1.5rem;">
+            <strong style="color:#111827;">【★F01 公司名称，如：腾讯游戏】</strong>
+            <span style="color:#6b7280;">— 【★F01 职位，如：关卡策划实习生】</span>
+            <span style="color:#9ca3af;font-size:0.85rem;">【★F01 时间，如：2025.06 - 2025.09】</span>
+            <p style="margin-top:0.25rem;color:#374151;">【★F01 描述：参与某FPS项目的PVP地图设计，负责3张地图的白盒搭建与迭代。】</p>
+          </div>
+          <!-- 复制上面的 <div> 块添加更多经历 -->
+        </div>
+        -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 页脚 [G01]-[G04] ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer__copy">&copy; 2026 Perc1val. All rights reserved.</p>
+    <div class="footer__social">
+      <a href="【★G02 你的GitHub链接，不需要就删掉整行】" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="【★G03 你的LinkedIn链接，不需要就删掉整行】" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:3462286370@qq.com" aria-label="邮箱"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== 弹窗（点击卡片后弹出）— 不需要改 ========== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal__tabs" id="modalTabs">
+      <button class="modal__tab modal__tab--active" data-tab="video" id="tabVideo">
+        <i class="fa-solid fa-play"></i> 演示视频
+      </button>
+      <button class="modal__tab" data-tab="doc" id="tabDoc">
+        <i class="fa-solid fa-file-lines"></i> 设计原稿
+      </button>
+    </div>
+    <div class="modal__content">
+      <div class="modal__panel modal__panel--active" id="panelVideo">
+        <div class="modal__video-wrap">
+          <div class="modal__video-loader"></div>
+          <video controls playsinline preload="metadata" style="display:none;"></video>
+          <div class="modal__video-placeholder">
+            <i class="fa-regular fa-circle-play"></i>
+            <p>视频添加后将在此展示</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__panel" id="panelDoc">
+        <iframe class="modal__doc-iframe" title="关卡设计文档"></iframe>
+        <div class="modal__doc-text"></div>
+        <div class="modal__doc-placeholder">
+          <i class="fa-regular fa-file-lines"></i>
+          <p>文档添加后将在此展示</p>
+        </div>
+      </div>
+    </div>
+    <button class="modal__close" id="modalClose" aria-label="关闭">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+</div>
+
+<!-- ========== JavaScript（页面切换、弹窗逻辑）— 不需要改 ========== -->
+<script>
+(function() {
+  'use strict';
+
+  var nav = document.getElementById('nav');
+  var navToggle = document.getElementById('navToggle');
+  var navMobile = document.getElementById('navMobile');
+  var navAll = document.querySelectorAll('[data-nav]');
+
+  var modalOverlay = document.getElementById('modalOverlay');
+  var modalClose = document.getElementById('modalClose');
+  var modalTabs = document.querySelectorAll('.modal__tab');
+  var modalPanels = document.querySelectorAll('.modal__panel');
+
+  var isTransitioning = false;
+
+  function switchPage(pageName) {
+    if (isTransitioning) return;
+    var activePage = document.querySelector('.page--active');
+    if (activePage && activePage.getAttribute('data-page') === pageName) return;
+
+    if (activePage) {
+      isTransitioning = true;
+      activePage.style.opacity = '0';
+
+      var finished = false;
+      var finish = function() {
+        if (finished) return;
+        finished = true;
+        activePage.classList.remove('page--active');
+        showPage(pageName);
+        isTransitioning = false;
+      };
+
+      activePage.addEventListener('transitionend', function handler(e) {
+        if (e.target !== activePage || e.propertyName !== 'opacity') return;
+        activePage.removeEventListener('transitionend', handler);
+        finish();
+      });
+
+      setTimeout(finish, 250);
+    } else {
+      showPage(pageName);
+    }
+  }
+
+  function showPage(pageName) {
+    var target = document.querySelector('[data-page="' + pageName + '"]');
+    if (!target) return;
+    target.classList.add('page--active');
+    target.offsetHeight;
+    target.style.opacity = '1';
+
+    navAll.forEach(function(el) {
+      el.classList.remove('nav--active');
+      if (el.getAttribute('data-nav') === pageName) {
+        el.classList.add('nav--active');
+      }
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMenu();
+
+    if (pageName === 'home') setTimeout(observeReveal, 300);
+  }
+
+  navAll.forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      var page = el.getAttribute('data-nav');
+      if (page) switchPage(page);
+    });
+  });
+
+  function openMenu() {
+    navToggle.classList.add('nav__toggle--open');
+    navMobile.classList.add('nav__mobile--open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    navToggle.classList.remove('nav__toggle--open');
+    navMobile.classList.remove('nav__mobile--open');
+    document.body.style.overflow = '';
+  }
+
+  navToggle.addEventListener('click', function() {
+    navToggle.classList.contains('nav__toggle--open') ? closeMenu() : openMenu();
+  });
+
+  var scrollTicking = false;
+  window.addEventListener('scroll', function() {
+    if (!scrollTicking) {
+      requestAnimationFrame(function() {
+        nav.classList.toggle('nav--scrolled', window.scrollY > 10);
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
+
+  function populateModal(card) {
+    var video     = card.getAttribute('data-video') || '';
+    var poster    = card.getAttribute('data-video-poster') || '';
+    var docIframe = card.getAttribute('data-doc-iframe') || '';
+    var docText   = card.getAttribute('data-doc-text') || '';
+
+    var videoEl = modalOverlay.querySelector('#panelVideo video');
+    var videoPh = modalOverlay.querySelector('#panelVideo .modal__video-placeholder');
+    if (video) {
+      videoEl.src = video;
+      if (poster) videoEl.poster = poster; else videoEl.removeAttribute('poster');
+      videoEl.style.display = 'block';
+      videoPh.style.display = 'none';
+    } else {
+      try { videoEl.pause(); } catch (err) {}
+      videoEl.removeAttribute('src');
+      videoEl.removeAttribute('poster');
+      try { videoEl.load(); } catch (err) {}
+      videoEl.style.display = 'none';
+      videoPh.style.display = '';
+    }
+
+    var iframeEl  = modalOverlay.querySelector('.modal__doc-iframe');
+    var docTextEl = modalOverlay.querySelector('.modal__doc-text');
+    var docPhEl   = modalOverlay.querySelector('.modal__doc-placeholder');
+
+    iframeEl.classList.remove('modal__doc-iframe--visible');
+    docTextEl.classList.remove('modal__doc-text--visible');
+    docPhEl.classList.remove('modal__doc-placeholder--hidden');
+    docTextEl.textContent = '';
+
+    if (docIframe) {
+      iframeEl.src = docIframe;
+      iframeEl.classList.add('modal__doc-iframe--visible');
+      docPhEl.classList.add('modal__doc-placeholder--hidden');
+    } else {
+      iframeEl.removeAttribute('src');
+      if (docText) {
+        docTextEl.textContent = docText;
+        docTextEl.classList.add('modal__doc-text--visible');
+        docPhEl.classList.add('modal__doc-placeholder--hidden');
+      }
+    }
+  }
+
+  var projectCards = document.querySelectorAll('.project-card');
+  var tabVideo = document.getElementById('tabVideo');
+  var tabDoc = document.getElementById('tabDoc');
+
+  projectCards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      var mode = card.getAttribute('data-modal-mode');
+      var isDocOnly = (mode === 'doc-only');
+
+      populateModal(card);
+
+      // 根据模式显示/隐藏标签按钮 & 切换弹窗样式
+      if (isDocOnly) {
+        tabVideo.style.display = 'none';
+        tabDoc.style.display = '';
+        tabDoc.classList.add('modal__tab--active');
+        tabVideo.classList.remove('modal__tab--active');
+        modalOverlay.classList.add('modal-overlay--doc-only');
+      } else {
+        tabVideo.style.display = '';
+        tabDoc.style.display = '';
+        tabVideo.classList.add('modal__tab--active');
+        tabDoc.classList.remove('modal__tab--active');
+        modalOverlay.classList.remove('modal-overlay--doc-only');
+      }
+
+      modalOverlay.classList.add('modal-overlay--open');
+      document.body.style.overflow = 'hidden';
+      switchTab(isDocOnly ? 'doc' : 'video');
+    });
+  });
+
+  function closeModal() {
+    var v = modalOverlay.querySelector('#panelVideo video');
+    if (v && !v.paused) { try { v.pause(); } catch (err) {} }
+    modalOverlay.classList.remove('modal-overlay--open');
+	    modalOverlay.classList.remove('modal-overlay--doc-only');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+
+  modalOverlay.addEventListener('click', function(e) {
+    if (e.target === modalOverlay) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('modal-overlay--open')) {
+      closeModal();
+    }
+  });
+
+  function switchTab(tabName) {
+    modalTabs.forEach(function(tab) {
+      tab.classList.remove('modal__tab--active');
+      if (tab.getAttribute('data-tab') === tabName) {
+        tab.classList.add('modal__tab--active');
+      }
+    });
+    modalPanels.forEach(function(panel) {
+      panel.classList.remove('modal__panel--active');
+    });
+    var targetPanel = tabName === 'video'
+      ? document.getElementById('panelVideo')
+      : document.getElementById('panelDoc');
+    if (targetPanel) targetPanel.classList.add('modal__panel--active');
+  }
+
+  modalTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      switchTab(tab.getAttribute('data-tab'));
+    });
+  });
+
+  function observeReveal() {
+    var revealEls = document.querySelectorAll('#page-home .reveal:not(.reveal--visible)');
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(function(el) { el.classList.add('reveal--visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(function(el) { observer.observe(el); });
+  }
+
+  observeReveal();
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.pageYOffset - 56;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
