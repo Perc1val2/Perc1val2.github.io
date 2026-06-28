@@ -974,7 +974,11 @@ a{color:inherit;text-decoration:none}
 }
 
 .modal__panel { display: none; }
-.modal__panel--active { display: block; height: 100%; }
+.modal__panel--active { display: block; }
+
+/* 文档面板：视频模式匹配16:9，doc-only撑满全高 */
+#panelDoc { aspect-ratio: 16 / 9; }
+.modal-overlay--doc-only #panelDoc { aspect-ratio: auto; height: 100%; }
 
 /* ── 关闭按钮（白色，直角）── */
 .modal__close {
@@ -1024,11 +1028,18 @@ a{color:inherit;text-decoration:none}
   border: none;
 }
 
-.modal__video-wrap video {
+.modal__video-wrap video,
+.modal__bilibili {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border: none;
   border-radius: 0;
+  position: absolute;
+  inset: 0;
+}
+
+.modal__video-wrap video {
+  object-fit: contain;
   background: #000000;
 }
 
@@ -1075,16 +1086,15 @@ a{color:inherit;text-decoration:none}
 /* ── 文档面板：全高度PDF iframe，直角，无边框 ── */
 .modal__doc-iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   border: none;
   border-radius: 0;
   display: none;
   background: #ffffff;
 }
 
-/* doc-only 撑满全高 */
-.modal-overlay--doc-only .modal__doc-iframe {
-  aspect-ratio: auto;
+/* 视频+文档模式：文档面板匹配视频16:9 */
+#panelDoc .modal__doc-iframe {
   height: 100%;
 }
 
@@ -1210,42 +1220,62 @@ a{color:inherit;text-decoration:none}
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0 1.25rem; }
-  .nav__inner { padding: 0 1.25rem; }
+  .container { padding: 0 1rem; }
+  .nav__inner { padding: 0 1rem; }
   .nav__links { display: none; }
   .nav__toggle { display: flex; }
   .nav__mobile { display: flex; }
 
-  .identity { min-height: auto; padding: 6rem 1.5rem 3rem; width: 100%; max-width: 100%; min-width: 0; }
+  .identity {
+    min-height: 100svh;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 5rem 1.25rem 2rem;
+  }
 
   .identity__email-tag { display: none; }
 
-  .identity__right-float { position: relative; right: auto; top: auto; transform: none; flex-direction: row; gap: 1rem; margin-top: 1.5rem; }
+  .identity__right-float {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+  }
 
-  .identity__name { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .identity__name { font-size: clamp(2.2rem, 10vw, 3.5rem); }
 
-  .helmet-logo { width: 60px; height: 66px; }
+  .helmet-logo { width: 50px; height: 55px; }
+  .helmet-dome { width: 44px; height: 48px; }
+  .helmet-visor { width: 28px; height: 32px; top: 10px; }
+  .helmet-ring { width: 34px; bottom: 16px; }
+  .helmet-shoulders { width: 50px; bottom: 6px; }
 
-  .identity__status { padding: 0.5rem 1.5rem; font-size: 0.7rem; }
+  .identity__status { left: 0; padding: 0.5rem 1.25rem; font-size: 0.68rem; }
 
-  .helmet-logo { width: 80px; height: 90px; }
-  .helmet-dome { width: 58px; height: 64px; }
-  .helmet-visor { width: 38px; height: 42px; top: 14px; }
-  .helmet-ring { width: 44px; bottom: 22px; }
-  .helmet-shoulders { width: 66px; bottom: 8px; }
+  .projects__grid { grid-template-columns: 1fr; gap: 1.25rem; }
 
-  .projects__grid { grid-template-columns: 1fr; }
+  .project-card { aspect-ratio: 16/9; }
 
-  .modal-overlay { padding: 1rem; }
-  .modal { border-radius: 0; }
-  .modal__close { top: 0; right: -36px; }
+  .modal-overlay { padding: 10px; align-items: center; }
+  .modal {
+    border-radius: 0;
+    max-height: 95vh;
+    height: auto;
+    flex-direction: column;
+    background: rgba(20,20,40,0.65);
+  }
+  .modal__close { top: 6px; right: 6px; width: 28px; height: 28px; }
 
   .modal__tabs {
     position: static;
     flex-direction: row;
     transform: none;
-    padding: 0.5rem;
-    gap: 0.4rem;
+    padding: 0.4rem;
+    gap: 0.3rem;
     overflow-x: auto;
     background: rgba(255,255,255,0.04);
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -1255,40 +1285,37 @@ a{color:inherit;text-decoration:none}
   .modal__tab {
     white-space: nowrap;
     flex-shrink: 0;
-    font-size: 0.72rem;
-    padding: 0.4rem 0.7rem;
-    color: rgba(255,255,255,0.85);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
     border-radius: 0;
   }
 
-  .modal__tab:hover { transform: none; background: rgba(255,255,255,0.14); }
-  .modal__tab--active { background: rgba(255,255,255,0.2); color: #fff; transform: none; font-weight: 600; }
+  .modal__content { margin-left: 0; padding: 0.5rem; min-height: 200px; }
 
-  .modal__content { margin-left: 0; padding: 0; min-height: 250px; }
-  .modal { flex-direction: column; background: transparent; }
+  .modal__doc-iframe { height: 70vh; aspect-ratio: auto; }
+  .modal__video-wrap { aspect-ratio: 16/9; }
 
-  .modal__doc-iframe { height: 100%; }
-
-  .modal-overlay--doc-only { padding: 0 0.25rem; }
-  .modal-overlay--doc-only .modal { border-radius: 0; }
-  .modal-overlay--doc-only .modal__close { top: 6px; right: 6px; }
+  .modal-overlay--doc-only { padding: 0; align-items: stretch; }
+  .modal-overlay--doc-only .modal {
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    background: #fff;
+  }
+  .modal-overlay--doc-only .modal__close { top: 8px; right: 8px; z-index: 10; }
   .modal-overlay--doc-only .modal__tab {
     color: #555;
     background: rgba(0,0,0,0.03);
     border: 1px solid rgba(0,0,0,0.08);
   }
+  .modal-overlay--doc-only .modal__content { padding: 0; }
+  .modal-overlay--doc-only .modal__doc-iframe { height: 100%; }
 
   .resume__header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-
   .resume__specialties { justify-content: flex-start; }
   .resume__specialties-inner { text-align: left; }
   .resume__specialties-inner .resume__section-title { text-align: left; }
   .resume__tags--right { justify-content: flex-start; }
-
-  .modal-overlay--doc-only { padding: 0 0.25rem; }
-  .modal-overlay--doc-only .modal { border-radius: 8px; }
 }
 </style>
 </head>
@@ -1366,8 +1393,9 @@ a{color:inherit;text-decoration:none}
 
         <!-- ── 关卡白盒 卡片1：第一人称时空变换白盒 ── -->
         <div class="project-card reveal" data-project="whitebox-1"
-             data-video="Time.mp4"
-             data-video-poster="Time.png"
+             data-bilibili="BV1afTT6hEsT"
+             data-video=""
+             data-video-poster="Time_opt.jpg"
              data-doc-iframe="Time.pdf"
              data-doc-text="">
           <div class="project-card__img">
@@ -1375,7 +1403,7 @@ a{color:inherit;text-decoration:none}
               <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
               <span class="project-card__img-placeholder-label"></span>
             </div>
-            <img alt="项目截图" loading="lazy" decoding="async" src="Time.png"
+            <img alt="项目截图" loading="lazy" decoding="async" src="Time_opt.jpg"
                  onload="this.previousElementSibling.style.display='none'"
                  onerror="this.style.display='none'">
           </div>
@@ -1392,8 +1420,9 @@ a{color:inherit;text-decoration:none}
 
         <!-- ── 关卡白盒 卡片2：山谷关卡白盒 ── -->
         <div class="project-card reveal" data-project="whitebox-2"
-             data-video="valley.mp4"
-             data-video-poster="Valley.png"
+             data-bilibili="BV1r6TT6CEEi"
+             data-video=""
+             data-video-poster="Valley_opt.jpg"
              data-doc-iframe="Valley.pdf"
              data-doc-text="">
           <div class="project-card__img">
@@ -1401,7 +1430,7 @@ a{color:inherit;text-decoration:none}
               <i class="fa-solid fa-image" style="font-size:42px;color:#cccccc;"></i>
               <span class="project-card__img-placeholder-label"></span>
             </div>
-            <img alt="项目截图" loading="lazy" decoding="async" src="Valley.png"
+            <img alt="项目截图" loading="lazy" decoding="async" src="Valley_opt.jpg"
                  onload="this.previousElementSibling.style.display='none'"
                  onerror="this.style.display='none'">
           </div>
@@ -1665,6 +1694,7 @@ a{color:inherit;text-decoration:none}
     <div class="modal__content">
       <div class="modal__panel modal__panel--active" id="panelVideo">
         <div class="modal__video-wrap">
+          <iframe class="modal__bilibili" src="" allowfullscreen style="display:none;"></iframe>
           <div class="modal__video-loader"></div>
           <video controls playsinline preload="metadata" style="display:none;"></video>
           <div class="modal__video-placeholder">
@@ -1796,14 +1826,22 @@ a{color:inherit;text-decoration:none}
     var docIframe = card.getAttribute('data-doc-iframe') || '';
     var docText   = card.getAttribute('data-doc-text') || '';
 
-    var videoEl = modalOverlay.querySelector('#panelVideo video');
-    var videoPh = modalOverlay.querySelector('#panelVideo .modal__video-placeholder');
-    if (video) {
+    var bvid     = card.getAttribute('data-bilibili') || '';
+    var videoEl  = modalOverlay.querySelector('#panelVideo video');
+    var videoPh  = modalOverlay.querySelector('#panelVideo .modal__video-placeholder');
+    var biliEl   = modalOverlay.querySelector('#panelVideo .modal__bilibili');
+    if (bvid) {
+      if (biliEl) { biliEl.src = '//player.bilibili.com/player.html?bvid=' + bvid; biliEl.style.display = ''; }
+      if (videoEl) videoEl.style.display = 'none';
+      if (videoPh) videoPh.style.display = 'none';
+    } else if (video) {
+      if (biliEl) { biliEl.removeAttribute('src'); biliEl.style.display = 'none'; }
       videoEl.src = video;
       if (poster) videoEl.poster = poster; else videoEl.removeAttribute('poster');
       videoEl.style.display = 'block';
       videoPh.style.display = 'none';
     } else {
+      if (biliEl) { biliEl.removeAttribute('src'); biliEl.style.display = 'none'; }
       try { videoEl.pause(); } catch (err) {}
       videoEl.removeAttribute('src');
       videoEl.removeAttribute('poster');
@@ -1871,6 +1909,7 @@ a{color:inherit;text-decoration:none}
     var v = modalOverlay.querySelector('#panelVideo video');
     if (v && !v.paused) { try { v.pause(); } catch (err) {} }
     modalOverlay.classList.remove('modal-overlay--open');
+    var b = modalOverlay.querySelector('#panelVideo .modal__bilibili'); if (b) { b.removeAttribute('src'); b.style.display = 'none'; }
 	    modalOverlay.classList.remove('modal-overlay--doc-only');
     document.body.style.overflow = '';
   }
