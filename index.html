@@ -1831,9 +1831,10 @@ a{color:inherit;text-decoration:none}
     var videoPh  = modalOverlay.querySelector('#panelVideo .modal__video-placeholder');
     var biliEl   = modalOverlay.querySelector('#panelVideo .modal__bilibili');
     if (bvid) {
-      if (biliEl) { biliEl.src = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&page=1&as_wide=1'; biliEl.style.display = ''; }
+      if (biliEl) { biliEl.src = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&page=1&as_wide=1'; biliEl.style.display = 'block'; }
       if (videoEl) videoEl.style.display = 'none';
       if (videoPh) videoPh.style.display = 'none';
+      var loaderEl2 = modalOverlay.querySelector('#panelVideo .modal__video-loader'); if (loaderEl2) loaderEl2.style.display = 'none';
     } else if (video) {
       if (biliEl) { biliEl.removeAttribute('src'); biliEl.style.display = 'none'; }
       videoEl.src = video;
